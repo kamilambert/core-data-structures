@@ -27,8 +27,18 @@ describe('Node', () => {
       expect(() => { nodeA.setNext(nodeB) }).to.alter(() => nodeA.next)
     })
 
-    it.only('returns the original node', () => {
-      expect( nodeA.setNext() ).to.equal('nodeA')
+    it('returns the original node', () => {
+      expect( nodeA.setNext() ).to.equal(nodeA)
+    })
+  })
+
+  context.only('getNext()', () => {
+    it('returns the next node', () => {
+      expect( nodeA.getNext(nodeB) ).to.equal(nodeA.next)
+    })
+
+    it('returns null if no next node', () => {
+      expect( nodeA.getNext() ).to.equal(null)
     })
   })
 })

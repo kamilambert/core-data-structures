@@ -9,7 +9,15 @@ export default class Node {
   }
 
   setNext(inputNode) {
-    this.data.next = inputNode
+    this.next = inputNode
     return this
+  }
+
+  getNext(nextNode) {
+    if (nextNode === undefined) {
+      return null
+    } else {
+      return this.next
+    }
   }
 }
