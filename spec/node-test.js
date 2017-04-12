@@ -32,7 +32,7 @@ describe('Node', () => {
     })
   })
 
-  context.only('getNext()', () => {
+  context('getNext()', () => {
     it('returns the next node', () => {
       expect( nodeA.getNext(nodeB) ).to.equal(nodeA.next)
     })

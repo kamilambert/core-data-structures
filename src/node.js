@@ -14,7 +14,7 @@ export default class Node {
   }
 
   getNext(nextNode) {
-    if (nextNode === undefined) {
+    if (nextNode == undefined) {
       return null
     } else {
       return this.next

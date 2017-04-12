@@ -7,7 +7,7 @@ class Node {
 
 class LinkedList {
   constructor(data) {
-    this._length = 0
+    this.counter = 0
     this.head = null
     this.tail = null
   }
@@ -57,28 +57,104 @@ class LinkedList {
       this.tail.next = newNode
       this.tail = newNode
     }
+    this.counter++
   }
 
   insertFirst(fruit) {
     let newNode = new Node(fruit)
-    this.head = newNode
+    let currentNode = this.head
+
+    if ( !currentNode ) {
+      this.head = newNode
+      this.tail = newNode
+    } else {
+      newNode.next = this.head
+      this.head = newNode
+    }
+    currentNode = currentNode.next
+    this.counter++
   }
 
-  // insertBefore(fruit, newFruit) {
-  //   let newNode = new Node(fruit), current = this.find(fruit)
-  //   newNode.next = current.next
-  // }
+  insertBefore(fruit, newFruit) {
+    let newNode = new Node(newFruit)
+    let currentNode = this.head
 
-  insertAfter(fruit, newFruit) {
-    let newNode = new Node(newFruit), currentNode = this.head
+    if(this.counter == 1) {
+      newNode.next = this.head
+      this.head = newNode
+    }
     while ( currentNode ) {
       if ( currentNode.next.data == fruit) {
         newNode.next = currentNode.next
         currentNode.next = newNode
         return
-      }
-    currentNode = currentNode.next
+    } else {
+        currentNode = currentNode.next
     }
+      if (currentNode == this.tail) {
+        return `${fruit} does not exist`
+      }
+    }
+    this.counter++
+  }
+
+  insertAfter(fruit, newFruit) {
+    let newNode = new Node(newFruit)
+    let currentNode = this.head
+
+    if(this.counter == 1) {
+      currentNode.next = newNode
+    }
+    while ( currentNode ) {
+      if ( currentNode.data == fruit) {
+        newNode.next = currentNode.next
+        currentNode.next = newNode
+        return
+    } else {
+        currentNode = currentNode.next
+    }
+      if (currentNode == this.tail) {
+        return `${fruit} does not exist`
+      }
+    }
+    this.counter++
+  }
+
+  remove() {
+    let currentNode = this.head
+    while( currentNode.next ) {
+      if(currentNode.next === this.tail) {
+        currentNode = this.tail
+        currentNode.next = null
+      }
+      this.counter--
+      return
+    }
+      currentNode.next = currentNode
+  }
+
+  removeFirst() {
+    let currentNode = this.head
+    this.head = currentNode.next
+      this.counter--
+      return
+  }
+
+  isEmpty() {
+    if (this.head == null) {
+      return true
+    }
+    return false
+    // could also write: return this.head === null
+  }
+
+  size() {
+    return this.counter
+  }
+
+  clear() {
+    this.head = this.tail = null
+    this.counter = 0
   }
 }
 

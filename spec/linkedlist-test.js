@@ -64,13 +64,50 @@ describe('LinkedList', () => {
     })
   })
 
-  context.only('insertAfter()', () => {
-    it('inserts a node "pomegranate" after the first node containing "banana"')
-    linkedList.insertAfter('banana', 'pomegranate')
-    expect( linkedList.head.next.data ).to.equal('pomegranate')
+  context('insertBefore()', () => {
+    it('inserts a node "pomegranate" before the first node containing "banana"', () => {
+      linkedList.insertBefore('banana', 'pomegranate')
+      expect( linkedList.head.next.data ).to.equal('pomegranate')
+    })
+  })
+
+  context('insertAfter()', () => {
+    it('inserts a node "coconut" after the first node containing "banana"', () => {
+      linkedList.insertAfter('banana', 'coconut')
+      expect( linkedList.head.next.next.next.data ).to.equal('coconut')
+    })
+  })
+
+  context('remove()', () => {
+    it('removes the tail node from the list', () => {
+      linkedList.remove()
+      expect(linkedList.counter).to.equal(5)
+    })
+  })
+
+  context('removeFirst()', () => {
+    it('removes the head node from the list', () => {
+      linkedList.removeFirst()
+      expect(linkedList.head.data).to.equal('pomegranate')
+    })
+  })
+
+  context('isEmpty()', () => {
+    it('determines if the list is empty or not', () => {
+      expect( linkedList.isEmpty() ).to.equal(false)
+    })
+  })
+
+  context('size()', () => {
+    it('returns the size of the list', () => {
+      expect( linkedList.size() ).to.equal(4)
+    })
+  })
+
+  context('clear', () => {
+    it('clears the list of all nodes/data', () => {
+      linkedList.clear()
+      expect( linkedList.counter ).to.equal(0)
+    })
   })
 })
-//
-// it('changes the reference to the next node', () => {
-//   expect(() => { nodeA.setNext(nodeB) }).to.alter(() => nodeA.next)
-// })
