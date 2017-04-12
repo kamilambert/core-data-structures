@@ -6,7 +6,7 @@ import { Node, LinkedList } from '../src/linked-list'
 chai.use(chaiChange)
 
 describe('LinkedList', () => {
-  'use strict'
+  ' use strict '
 
   const linkedList = new LinkedList()
   linkedList.insert('banana')

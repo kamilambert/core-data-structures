@@ -130,7 +130,7 @@ class LinkedList {
       this.counter--
       return
     }
-      currentNode.next = currentNode
+      currentNode.next = currentNode 
   }
 
   removeFirst() {
