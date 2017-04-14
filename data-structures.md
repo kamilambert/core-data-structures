@@ -12,9 +12,9 @@ A very basic data structure that can contain some value and a reference to anoth
 const nodeA = new Node({data: "apple"})
 const nodeB = new Node({data: "banana"})
 
-nodeA.getData()       // returns the data ("apple") of the node
-nodeA.setNext(nodeB)  // changes the reference to the next node and returns the original node
-nodeA.getNext()       // returns the next node, or null if no next node
+[x]nodeA.getData()       // returns the data ("apple") of the node
+[x]nodeA.setNext(nodeB)  // changes the reference to the next node and returns the original node
+[x]nodeA.getNext()       // returns the next node, or null if no next node
 ```
 
 ### Linked List ( using Nodes )
@@ -29,19 +29,19 @@ Specifically, the following is a _singly-linked_ list (as opposed to a [doubly-l
 
 ```javascript
 const linkedList = new LinkedList()
-linkedList.getHeadNode()           // Returns the first node in the list
-linkedList.getTailNode()           // Returns the last node in the list
-linkedList.contains("bananas")     // Determines whether or not the list contains the provided data
-linkedList.find("bananas")         // Returns the first node containing the provided data, or -1 if not found
-linkedList.insert("bananas")       // Inserts a node (with the provided data) to the tail of the list
-linkedList.insertFirst("bananas")  // Inserts a node (with the provided data) to the head of the list
-linkedList.insertBefore("bananas", "apples") // Inserts a node (with data "apples") before the first node containing "bananas"
-linkedList.insertAfter("apples", "bananas")  // Inserts a node (with data "bananas") after the first node containing "apples"
-linkedList.remove()                // Removes the tail node from the list
-linkedList.removeFirst()           // Removes the head node from the list
-linkedList.isEmpty()               // Determines if the list is empty or not
-linkedList.size()                  // Returns the size of the list (number of nodes)
-linkedList.clear()                 // Clears the list of all nodes/data
+[x]linkedList.getHeadNode()           // Returns the first node in the list
+[x]linkedList.getTailNode()           // Returns the last node in the list
+[x]linkedList.contains("bananas")     // Determines whether or not the list contains the provided data
+[x]linkedList.find("bananas")         // Returns the first node containing the provided data, or -1 if not found
+[x]linkedList.insert("bananas")       // Inserts a node (with the provided data) to the tail of the list
+[x]linkedList.insertFirst("bananas")  // Inserts a node (with the provided data) to the head of the list
+[x]linkedList.insertBefore("bananas", "apples") // Inserts a node (with data "apples") before the first node containing "bananas"
+[x]linkedList.insertAfter("apples", "bananas")  // Inserts a node (with data "bananas") after the first node containing "apples"
+[x]linkedList.remove()                // Removes the tail node from the list
+[x]linkedList.removeFirst()           // Removes the head node from the list
+[x]linkedList.isEmpty()               // Determines if the list is empty or not
+[x]linkedList.size()                  // Returns the size of the list (number of nodes)
+[x]linkedList.clear()                 // Clears the list of all nodes/data
 ```
 
 ### Stack ( using Nodes )
@@ -54,11 +54,11 @@ From [Wikipedia](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)) [edit
 
 ```javascript
 const stack = new Stack()
-stack.push("foo") // push an element (the string "foo") to the top of the stack.
-stack.pop()       // returns and removes the top element in the stack or null if the stack is empty.
-stack.peek()      // returns the top element in the stack or null if the stack is empty.
-stack.isEmpty()   // returns true if the stack is empty or false if not.
-stack.length()    // returns the number of elements in the stack.
+[x]stack.push("foo") // push an element (the string "foo") to the top of the stack.
+[x]stack.pop()       // returns and removes the top element in the stack or null if the stack is empty.
+[x]stack.peek()      // returns the top element in the stack or null if the stack is empty.
+[x]stack.isEmpty()   // returns true if the stack is empty or false if not.
+[x]stack.length()    // returns the number of elements in the stack.
 ```
 
 To implement a _standard_ stack, use the [Node](#node) data structure in your implementation.
@@ -73,12 +73,12 @@ From [Wikipedia](https://en.wikipedia.org/wiki/Queue_(abstract_data_type)) [edit
 
 ```javascript
 const queue = new Queue()
-queue.enqueue("foo") // adds an element (the string "foo") to the back of the queue.
-queue.dequeue()      // returns and removes the front element in the queue or null if the queue is empty.
-queue.front()        // returns the front element in queue or null if the queue is empty.
-queue.back()         // returns the back element in the queue or null if the queue is empty.
-queue.isEmpty()      // returns true if the queue is empty or false if not.
-queue.length()       // returns the number of elements in the queue
+[x]queue.enqueue("foo") // adds an element (the string "foo") to the back of the queue.
+[x]queue.dequeue()      // returns and removes the front element in the queue or null if the queue is empty.
+[x]queue.front()        // returns the front element in queue or null if the queue is empty.
+[x]queue.back()         // returns the back element in the queue or null if the queue is empty.
+[x]queue.isEmpty()      // returns true if the queue is empty or false if not.
+[x]queue.length()       // returns the number of elements in the queue
 ```
 
 To implement a _standard_ queue, use the [Node](#node) data structure in your implementation.
@@ -93,12 +93,12 @@ From [Wikipedia](https://en.wikipedia.org/wiki/Priority_queue) [edited]:
 
 ```javascript
 const pQueue = new PriorityQueue()
-pQueue.enqueue("pizza", 100) // adds an element with priority (number) to the back of the queue.
-pQueue.front()               // returns the front element (highest priority) in the queue or null if the queue is empty.
-pQueue.back()                // returns the back element (lowest priority) in the queue or null if the queue is empty.
-pQueue.dequeue()             // returns and removes the front element (highest priority) in the queue or null if the queue is empty.
-pQueue.isEmpty()             // returns true if the queue is empty or false if not.
-pQueue.length()              // returns the number of elements in the queue.
+[x]pQueue.enqueue("pizza", 100) // adds an element with priority (number) to the back of the queue.
+[x]pQueue.front()               // returns the front element (highest priority) in the queue or null if the queue is empty.
+[x]pQueue.back()                // returns the back element (lowest priority) in the queue or null if the queue is empty.
+[x]pQueue.dequeue()             // returns and removes the front element (highest priority) in the queue or null if the queue is empty.
+[x]pQueue.isEmpty()             // returns true if the queue is empty or false if not.
+[x]pQueue.length()              // returns the number of elements in the queue.
 ```
 
 #### Priority Node
@@ -109,11 +109,11 @@ To implement a _standard_ priority queue, use a **priority node** data structure
 const pizzaNode = new PriorityNode({data: "pizza", priority: 100})
 const saladNode = new PriorityNode({data: "salad", priority: 50})
 
-pizzaNode.getData()           // returns the node's data
-pizzaNode.getPriority()       // returns the node's priority
-pizzaNode.setPriority(200)    // changes the node's priority and returns the node
-pizzaNode.setNext(saladNode)  // changes the reference to the next node and returns the original node
-pizzaNode.getNext()           // returns the next node or null if none
+[x]pizzaNode.getData()           // returns the node's data
+[x]pizzaNode.getPriority()       // returns the node's priority
+[x]pizzaNode.setPriority(200)    // changes the node's priority and returns the node
+[x]pizzaNode.setNext(saladNode)  // changes the reference to the next node and returns the original node
+[x]pizzaNode.getNext()           // returns the next node or null if none
 ```
 
 ### Doubly-Linked List ( using Double Nodes )
