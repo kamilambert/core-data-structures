@@ -5,7 +5,7 @@ Tests and implementations for common data structures. See the full list in the [
 
 Base repository for the [Core Data Structures](http://jsdev.learnersguild.org/goals/128) goal.
 
-## Installation and Setup
+## Installation and Setup 
 
 For this project, we created both tests and implementations of core data structures. Begin with installing your dependencies from the package.json file.
 

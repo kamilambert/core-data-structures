@@ -14,7 +14,7 @@ const nodeB = new Node({data: "banana"})
 
 [x]nodeA.getData()       // returns the data ("apple") of the node
 [x]nodeA.setNext(nodeB)  // changes the reference to the next node and returns the original node
-[x]nodeA.getNext()       // returns the next node, or null if no next node
+[x]nodeA.getNext()       //   returns the next node, or null if no next node
 ```
 
 ### Linked List ( using Nodes )
